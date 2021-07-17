@@ -4,7 +4,7 @@ The Appointment Management System program provides a user interface for adding, 
 
 Author:
 Erik Scovin
-escovin@wgu.edu
+######@###.###
 V1.5.5.2021
 
 IntelliJ Community 2020.3
