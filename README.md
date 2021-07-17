@@ -1,6 +1,6 @@
 # Appointment_Management_System
 
-The Appointment Management System program provides a user interface for adding, updating and deleting customer records and appointments stored in a connected SQL Database. The program provides alerts and prompts when met with certain parameters, and tracks user login attemps. 
+The Appointment Management System program provides a user interface for adding, updating and deleting customer records and appointments stored in a connected SQL Database. The program provides alerts and prompts when met with certain parameters, and tracks user login attempts. 
 
 Author:
 Erik Scovin
