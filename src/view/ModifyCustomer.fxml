@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="405.0" prefWidth="1132.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyCustomerController">
+    <children>
+        <Pane layoutX="15.0" layoutY="17.0" prefHeight="371.0" prefWidth="488.0" style="-fx-border-color: grey;">
+            <children>
+                <Label fx:id="modifyTitleLab" alignment="CENTER" layoutX="106.0" layoutY="7.0" prefHeight="27.0" prefWidth="277.0" text="Modify Customer">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="modifyCustomerNameLab" layoutX="80.0" layoutY="76.0" prefHeight="27.0" prefWidth="115.0" text="Name:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="modifyCustomerAddressLab" layoutX="80.0" layoutY="115.0" prefHeight="27.0" prefWidth="94.0" text="Address:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="modifyCustomerPostalCodeLab" layoutX="80.0" layoutY="154.0" prefHeight="27.0" prefWidth="94.0" text="Postal Code:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="modifyCustomerPhoneNumberLab" layoutX="80.0" layoutY="193.0" prefHeight="27.0" prefWidth="148.0" text="Phone Number:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="nameTxt" layoutX="236.0" layoutY="77.0" prefHeight="25.0" prefWidth="176.0" />
+                <TextField fx:id="addressTxt" layoutX="236.0" layoutY="116.0" prefHeight="25.0" prefWidth="176.0" />
+                <TextField fx:id="postalCodeTxt" layoutX="236.0" layoutY="155.0" prefHeight="25.0" prefWidth="176.0" />
+                <TextField fx:id="phoneNumberTxt" layoutX="236.0" layoutY="194.0" prefHeight="25.0" prefWidth="176.0" />
+                <Button fx:id="cancelModifyButton" layoutX="371.0" layoutY="322.0" mnemonicParsing="false" onAction="#cancelModifyButtonAction" prefHeight="36.0" prefWidth="104.0" text="Cancel" />
+                <Button fx:id="saveModifyCustomerButton" layoutX="258.0" layoutY="322.0" mnemonicParsing="false" onAction="#saveModifyCustomerButtonAction" prefHeight="36.0" prefWidth="104.0" text="Save" />
+                <Label fx:id="modifyCustomerCountryLab" layoutX="80.0" layoutY="232.0" prefHeight="27.0" prefWidth="148.0" text="Country:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="countryComboBox" layoutX="236.0" layoutY="233.0" onAction="#countryComboBoxAction" prefHeight="25.0" prefWidth="176.0" />
+                <Label fx:id="modifyCustomerDivLab" layoutX="80.0" layoutY="269.0" prefHeight="27.0" prefWidth="148.0" text="Divison:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="divComboBox" layoutX="236.0" layoutY="271.0" prefHeight="25.0" prefWidth="176.0" />
+                <Label fx:id="errorCountryLab" layoutX="6.0" layoutY="326.0" prefHeight="27.0" prefWidth="247.0" textFill="#f80000" />
+                <Label fx:id="errorModNameLab" layoutX="236.0" layoutY="62.0" prefHeight="17.0" prefWidth="176.0" textFill="#f80000" />
+                <Label fx:id="errorModAddressLab" layoutX="236.0" layoutY="100.0" prefHeight="17.0" prefWidth="176.0" textFill="#f80000" />
+                <Label fx:id="errorModPostalCodeLab" layoutX="236.0" layoutY="140.0" prefHeight="17.0" prefWidth="176.0" textFill="#f80000" />
+                <Label fx:id="errorModPhoneLab" layoutX="236.0" layoutY="177.0" prefHeight="17.0" prefWidth="176.0" textFill="#f80000" />
+            <Label fx:id="modifyCustomerIdLab" layoutX="80.0" layoutY="38.0" prefHeight="27.0" prefWidth="115.0" text="ID:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idTxt" editable="false" layoutX="236.0" layoutY="39.0" prefHeight="25.0" prefWidth="176.0" />
+            </children>
+        </Pane>
+      <Pane layoutX="513.0" layoutY="17.0" prefHeight="371.0" prefWidth="603.0" style="-fx-border-color: grey;">
+         <children>
+            <Button fx:id="deleteCustomerButton" layoutX="368.0" layoutY="322.0" mnemonicParsing="false" onAction="#deleteCustomerButtonAction" prefHeight="36.0" prefWidth="221.0" text="Delete Selected" />
+            <TableView fx:id="customerTableView" layoutX="9.0" layoutY="39.0" prefHeight="268.0" prefWidth="585.0">
+              <columns>
+                <TableColumn fx:id="idCol" prefWidth="54.0" text="ID" />
+                <TableColumn fx:id="nameCol" prefWidth="108.79998779296875" text="Name" />
+                  <TableColumn fx:id="addressCol" prefWidth="132.79998779296875" text="Address" />
+                  <TableColumn fx:id="postalCodeCol" prefWidth="100.39996337890625" text="Postal Code" />
+                  <TableColumn fx:id="phoneCol" prefWidth="109.4000244140625" text="Phone" />
+                  <TableColumn fx:id="divCol" prefWidth="84.4000244140625" text="Division" />
+              </columns>
+            </TableView>
+            <Button fx:id="selectModifyButton" layoutX="14.0" layoutY="322.0" mnemonicParsing="false" onAction="#selectModifyButtonAction" prefHeight="36.0" prefWidth="221.0" text="Modify Selected" />
+            <Label fx:id="deleteConfirmLab" alignment="CENTER" layoutX="99.0" layoutY="14.0" prefHeight="20.0" prefWidth="406.0" textFill="#0052ff">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorSelDeleteLab" layoutX="192.0" layoutY="12.0" textFill="#f00303" />
+         </children></Pane>
+    </children>
+</AnchorPane>

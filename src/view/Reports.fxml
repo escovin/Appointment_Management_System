@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="554.0" prefWidth="1164.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsController">
+   <children>
+      <Pane layoutX="14.0" layoutY="49.0" prefHeight="494.0" prefWidth="572.0">
+         <children>
+            <Pane layoutX="10.0" layoutY="4.0" prefHeight="128.0" prefWidth="552.0" style="-fx-border-color: grey;">
+               <children>
+                  <Label alignment="CENTER" layoutX="18.0" layoutY="5.0" prefHeight="17.0" prefWidth="517.0" text="Appointment count by month/type">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ComboBox fx:id="monthComboBox" layoutX="26.0" layoutY="64.0" onAction="#monthComboBoxAction" prefWidth="150.0" />
+            <ComboBox fx:id="typeComboBox" layoutX="211.0" layoutY="64.0" onAction="#typeComboBoxAction" prefWidth="150.0" />
+            <Label alignment="CENTER" layoutX="71.0" layoutY="40.0" prefHeight="17.0" prefWidth="60.0" text="Month" />
+            <Label alignment="CENTER" layoutX="256.0" layoutY="40.0" prefHeight="17.0" prefWidth="60.0" text="Type" />
+            <Label alignment="CENTER" layoutX="439.0" layoutY="40.0" prefHeight="17.0" prefWidth="60.0" text="Count" />
+            <Label fx:id="countLab" alignment="CENTER" layoutX="418.0" layoutY="68.0" prefHeight="17.0" prefWidth="103.0" />
+            <Pane layoutX="10.0" layoutY="138.0" prefHeight="341.0" prefWidth="552.0" style="-fx-border-color: grey;">
+               <children>
+                  <ComboBox fx:id="contactComboBox" layoutX="201.0" layoutY="40.0" onAction="#contactComboBoxAction" prefWidth="150.0" />
+                  <Label alignment="CENTER" layoutX="18.0" layoutY="5.0" prefHeight="17.0" prefWidth="517.0" text="Appointment Schedule by contact">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_LEFT" layoutX="61.0" layoutY="44.0" prefHeight="17.0" prefWidth="134.0" text="Please select a contact:" />
+                  <TableView fx:id="appTableView" layoutX="9.0" layoutY="80.0" prefHeight="200.0" prefWidth="535.0">
+                    <columns>
+                      <TableColumn fx:id="appCol" prefWidth="71.60000610351562" text="ID" />
+                      <TableColumn fx:id="titleCol" prefWidth="69.20001220703125" text="Title" />
+                        <TableColumn fx:id="typeCol" prefWidth="71.0" text="Type" />
+                        <TableColumn fx:id="descriptionCol" prefWidth="88.0" text="Description" />
+                        <TableColumn fx:id="startCol" prefWidth="83.199951171875" text="Start" />
+                        <TableColumn fx:id="endCol" prefWidth="72.39996337890625" text="End" />
+                        <TableColumn fx:id="customerIdCol" prefWidth="81.4000244140625" text="Customer ID" />
+                    </columns>
+                  </TableView>
+               </children></Pane>
+         </children></Pane>
+      <Label layoutX="538.0" layoutY="14.0" text="Reports">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Pane layoutX="586.0" layoutY="53.0" prefHeight="475.0" prefWidth="552.0" style="-fx-border-color: grey;">
+         <children>
+            <ComboBox fx:id="customerComboBox" layoutX="201.0" layoutY="40.0" onAction="#customerComboBoxAction" prefWidth="150.0" />
+            <Label alignment="CENTER" layoutX="18.0" layoutY="5.0" prefHeight="17.0" prefWidth="517.0" text="Appointment List by customer">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="61.0" layoutY="44.0" prefHeight="17.0" prefWidth="134.0" text="Please select a customer:" />
+            <TableView fx:id="customerAppTableView" layoutX="9.0" layoutY="80.0" prefHeight="334.0" prefWidth="535.0">
+               <columns>
+                  <TableColumn fx:id="appIdCol2" prefWidth="43.0" text="ID" />
+                  <TableColumn fx:id="titleCol2" prefWidth="82.79998779296875" text="Title" />
+                  <TableColumn fx:id="typeCol2" prefWidth="99.60003662109375" text="Type" />
+                  <TableColumn fx:id="descriptionCol2" minWidth="2.4000244140625" prefWidth="81.39996337890625" text="Description" />
+                  <TableColumn fx:id="startCol2" prefWidth="77.0" text="Start" />
+                  <TableColumn fx:id="endCol2" prefWidth="81.0" text="End" />
+                  <TableColumn fx:id="contactIdCol" prefWidth="68.5999755859375" text="Contact ID" />
+               </columns>
+            </TableView>
+            <Button layoutX="447.0" layoutY="420.0" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="44.0" prefWidth="95.0" text="Back">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

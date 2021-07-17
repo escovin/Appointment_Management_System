@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainScreenController">
+   <children>
+      <Label fx:id="mainTitleLab" alignment="CENTER" layoutX="238.0" layoutY="14.0" prefHeight="35.0" prefWidth="324.0" text="Main Screen">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Pane layoutX="12.0" layoutY="59.0" prefHeight="70.0" prefWidth="778.0" style="-fx-border-color: grey;">
+         <children>
+            <Button fx:id="addCustomerButton" layoutX="10.0" layoutY="16.0" mnemonicParsing="false" onAction="#addCustomerButtonAction" prefHeight="39.0" prefWidth="179.0" text="Add Customer">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="modifyCustomerButton" layoutX="203.0" layoutY="16.0" mnemonicParsing="false" onAction="#modifyCustomerButtonAction" prefHeight="39.0" prefWidth="179.0" text="Modify Customer">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="addAppointmentButton" layoutX="396.0" layoutY="16.0" mnemonicParsing="false" onAction="#addAppointmentButtonAction" prefHeight="39.0" prefWidth="179.0" text="Add Appointment">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="modifyAppointmentButton" layoutX="588.0" layoutY="16.0" mnemonicParsing="false" onAction="#modifyAppointmentButtonAction" prefHeight="39.0" prefWidth="179.0" text="Modify Appointment">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button fx:id="exitButton" layoutX="704.0" layoutY="546.0" mnemonicParsing="false" onAction="#exitButtonAction" prefHeight="39.0" prefWidth="82.0" text="Exit">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="appointmentsTableView" layoutX="25.0" layoutY="209.0" prefHeight="313.0" prefWidth="754.0">
+        <columns>
+          <TableColumn fx:id="appIdCol" prefWidth="105.19999313354492" text="Appointment ID" />
+          <TableColumn fx:id="titleCol" prefWidth="45.19999694824219" text="Title" />
+            <TableColumn fx:id="descriptionCol" prefWidth="81.60002136230469" text="Description" />
+            <TableColumn fx:id="locationCol" prefWidth="67.39999389648438" text="Location" />
+            <TableColumn fx:id="contactCol" prefWidth="60.0" text="Contact" />
+            <TableColumn fx:id="typeCol" prefWidth="60.0" text="Type" />
+            <TableColumn fx:id="startCol" prefWidth="99.39996337890625" text="Start" />
+            <TableColumn fx:id="endCol" prefWidth="96.60003662109375" text="End" />
+            <TableColumn fx:id="customerIdCol" prefWidth="136.20001220703125" text="Customer ID" />
+        </columns>
+      </TableView>
+      <Label layoutX="25.0" layoutY="168.0" text="Appointments">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="weekViewRadioButton" layoutX="245.0" layoutY="173.0" mnemonicParsing="false" onAction="#weekViewRadioButtonAction" text="Week View">
+         <toggleGroup>
+            <ToggleGroup fx:id="viewToggle" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="monthViewRadioButton" layoutX="402.0" layoutY="173.0" mnemonicParsing="false" onAction="#monthViewRadioButtonAction" text="Month View" toggleGroup="$viewToggle" />
+      <Label fx:id="appAlert" alignment="CENTER" layoutX="76.0" layoutY="140.0" prefHeight="18.0" prefWidth="648.0" textFill="#034bff" />
+      <Button fx:id="reportsButton" layoutX="536.0" layoutY="169.0" mnemonicParsing="false" onAction="#reportsButtonAction" prefHeight="26.0" prefWidth="74.0" text="Reports" />
+   </children>
+</AnchorPane>

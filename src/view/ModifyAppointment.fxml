@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="521.0" prefWidth="1269.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyAppointmentController">
+    <children>
+        <Pane layoutX="15.0" layoutY="17.0" prefHeight="495.0" prefWidth="488.0" style="-fx-border-color: grey;">
+            <children>
+                <Label alignment="CENTER" layoutX="106.0" layoutY="7.0" prefHeight="27.0" prefWidth="277.0" text="Modify Appointment">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="80.0" layoutY="76.0" prefHeight="27.0" prefWidth="115.0" text="Title:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="80.0" layoutY="115.0" prefHeight="27.0" prefWidth="94.0" text="Description:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="80.0" layoutY="154.0" prefHeight="27.0" prefWidth="94.0" text="Location:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="80.0" layoutY="228.0" prefHeight="27.0" prefWidth="148.0" text="Type">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="titleTxt" layoutX="236.0" layoutY="77.0" prefHeight="25.0" prefWidth="176.0" />
+                <TextField fx:id="descriptionTxt" layoutX="236.0" layoutY="116.0" prefHeight="25.0" prefWidth="176.0" />
+                <TextField fx:id="locationTxt" layoutX="236.0" layoutY="155.0" prefHeight="25.0" prefWidth="176.0" />
+                <TextField fx:id="typeTxt" layoutX="236.0" layoutY="229.0" prefHeight="25.0" prefWidth="176.0" />
+                <Button fx:id="cancelModAppButton" layoutX="319.0" layoutY="450.0" mnemonicParsing="false" onAction="#cancelModAppButtonAction" prefHeight="36.0" prefWidth="156.0" text="Cancel" />
+                <Button fx:id="saveModAppButton" layoutX="138.0" layoutY="450.0" mnemonicParsing="false" onAction="#saveModAppButtonAction" prefHeight="36.0" prefWidth="156.0" text="Save" />
+                <Label layoutX="80.0" layoutY="264.0" prefHeight="27.0" prefWidth="148.0" text="Start Date:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="startDateComboBox" layoutX="236.0" layoutY="265.0" onAction="#startDateComboBoxAction" prefHeight="25.0" prefWidth="176.0" />
+                <Label layoutX="80.0" layoutY="301.0" prefHeight="27.0" prefWidth="148.0" text="Start Time:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="startTimeComboBox" layoutX="236.0" layoutY="303.0" onAction="#startTimeComboBoxAction" prefHeight="25.0" prefWidth="176.0" />
+                <Label fx:id="errorCountryLab" layoutX="6.0" layoutY="326.0" prefHeight="27.0" prefWidth="247.0" textFill="#f80000" />
+                <Label fx:id="errorTitleLab" layoutX="236.0" layoutY="62.0" prefHeight="17.0" prefWidth="176.0" textFill="#f80000" />
+                <Label fx:id="errorDescriptionLab" layoutX="236.0" layoutY="100.0" prefHeight="17.0" prefWidth="176.0" textFill="#f80000" />
+                <Label fx:id="errorLocationLab" layoutX="236.0" layoutY="140.0" prefHeight="17.0" prefWidth="176.0" textFill="#f80000" />
+                <Label fx:id="errorTypeLab" layoutX="236.0" layoutY="214.0" prefHeight="17.0" prefWidth="176.0" textFill="#f80000" />
+                <Label layoutX="80.0" layoutY="38.0" prefHeight="27.0" prefWidth="115.0" text="Appointment ID:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="appIdTxt" editable="false" layoutX="236.0" layoutY="39.0" prefHeight="25.0" prefWidth="176.0" />
+            <Label layoutX="80.0" layoutY="340.0" prefHeight="27.0" prefWidth="148.0" text="End Time:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="endTimeComboBox" layoutX="236.0" layoutY="340.0" onAction="#endTimeComboBoxAction" prefHeight="25.0" prefWidth="176.0" />
+            <Label layoutX="80.0" layoutY="377.0" prefHeight="27.0" prefWidth="148.0" text="Customer ID:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="customerIdTxt" layoutX="236.0" layoutY="378.0" prefHeight="25.0" prefWidth="176.0" />
+            <Label layoutX="80.0" layoutY="414.0" prefHeight="27.0" prefWidth="148.0" text="User ID:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userIdTxt" layoutX="236.0" layoutY="416.0" prefHeight="25.0" prefWidth="176.0" />
+            <Label layoutX="80.0" layoutY="192.0" prefHeight="27.0" prefWidth="148.0" text="Contact:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="contactComboBox" layoutX="236.0" layoutY="193.0" prefHeight="25.0" prefWidth="176.0" />
+            <Label fx:id="errorAppIdLab" alignment="TOP_LEFT" layoutX="14.0" layoutY="442.0" prefHeight="48.0" prefWidth="122.0" textFill="#ed0707" wrapText="true" />
+            <Label fx:id="errorUserIdLab" layoutX="236.0" layoutY="401.0" prefHeight="17.0" prefWidth="176.0" textFill="#f80000" />
+            <Label fx:id="errorCustomerIdLab" layoutX="236.0" layoutY="361.0" prefHeight="17.0" prefWidth="176.0" textFill="#f80000" />
+            <Label fx:id="errorContactLab" layoutX="236.0" layoutY="176.0" prefHeight="17.0" prefWidth="176.0" textFill="#f80000" />
+            <Label fx:id="errorStartTimeLab" layoutX="236.0" layoutY="288.0" prefHeight="17.0" prefWidth="176.0" textFill="#f80000" />
+            <Label fx:id="errorStartDateLab" layoutX="236.0" layoutY="249.0" prefHeight="17.0" prefWidth="176.0" textFill="#f80000" />
+            <Label fx:id="errorEndTimeLab" layoutX="236.0" layoutY="325.0" prefHeight="17.0" prefWidth="176.0" textFill="#f80000" />
+            </children>
+        </Pane>
+        <Pane layoutX="513.0" layoutY="17.0" prefHeight="495.0" prefWidth="740.0" style="-fx-border-color: grey;">
+            <children>
+                <Button fx:id="deleteCustomerButton" layoutX="467.0" layoutY="450.0" mnemonicParsing="false" onAction="#cancelAppButtonAction" prefHeight="36.0" prefWidth="221.0" text="Cancel Appointment" />
+                <TableView fx:id="appTableView" layoutX="9.0" layoutY="39.0" prefHeight="396.0" prefWidth="720.0">
+                    <columns>
+                        <TableColumn fx:id="appIdCol" prefWidth="107.20001220703125" text="Appointment ID" />
+                        <TableColumn fx:id="titleCol" minWidth="0.0" prefWidth="47.20001220703125" text="Title" />
+                        <TableColumn fx:id="descriptionCol" minWidth="0.0" text="Description" />
+                        <TableColumn fx:id="locationCol" minWidth="0.0" prefWidth="70.79998779296875" text="Location" />
+                        <TableColumn fx:id="contactCol" minWidth="0.0" prefWidth="56.39996337890625" text="Contact" />
+                        <TableColumn fx:id="typeCol" minWidth="0.0" prefWidth="40.4000244140625" text="Type" />
+                  <TableColumn fx:id="startCol" prefWidth="106.4000244140625" text="Start" />
+                  <TableColumn fx:id="endCol" prefWidth="103.2000732421875" text="End" />
+                  <TableColumn fx:id="customerIdCol" minWidth="1.2000732421875" prefWidth="113.0" text="Customer ID" />
+                    </columns>
+                </TableView>
+                <Button fx:id="selectModifyButton" layoutX="56.0" layoutY="450.0" mnemonicParsing="false" onAction="#selectModAppButtonAction" prefHeight="36.0" prefWidth="221.0" text="Modify Appointment" />
+                <Label fx:id="deleteConfirmLab" alignment="CENTER" layoutX="182.0" layoutY="11.0" prefHeight="20.0" prefWidth="406.0" textFill="#0052ff">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="errorSelDeleteLab" layoutX="239.0" layoutY="13.0" prefHeight="17.0" prefWidth="293.0" textFill="#f00303" />
+            <Label fx:id="appOverlapLab" alignment="CENTER" layoutX="171.0" layoutY="13.0" prefHeight="17.0" prefWidth="430.0" textFill="RED" />
+            </children></Pane>
+    </children>
+</AnchorPane>
